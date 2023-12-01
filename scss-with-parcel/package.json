@@ -1,0 +1,13 @@
+{
+  "name": "scss-with-parcel",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "rm -rf dist && parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.10.3",
+    "parcel": "^2.10.3"
+  }
+}

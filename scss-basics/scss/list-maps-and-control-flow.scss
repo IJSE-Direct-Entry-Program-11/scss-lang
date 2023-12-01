@@ -1,0 +1,59 @@
+@use "sass:list";
+@use "sass:map";
+
+$my-list: (red, green, blue);
+$my-list2: [1rem, 2rem, 3rem];
+
+$my-map: (color: red,
+         font-size: 2rem,
+         background-color: yellow);
+
+h1 {
+    color: list.nth($my-list, 3);
+    background-color: 
+            map.get($my-map, background-color);
+}
+
+ // @if ... @else if ... @else
+ // @for
+ // @while
+ // @each
+p{
+    @each $key, $value in $my-map {
+        @if ($key != 'color'){
+            #{$key}: #{$value};
+        }
+    }
+
+    /* 
+        color: red;
+        background-color: yellow;
+        font-size: 2rem;
+    */
+}
+
+@each $myVar in $my-list {
+    @debug $myVar;
+}
+
+@debug "--------------------";
+
+@for $i from 1 to (list.length($my-list) + 1) {
+    @debug $i;
+    @debug list.nth($my-list, $i);
+}
+
+$flag: true;
+$index: 1;
+
+@while ($flag){
+    @debug $index;
+    $index: $index + 1;
+    @if ($index == 5) {
+        $flag : false;
+    }
+}
+
+@each $item in $my-list2 {
+    @debug $item;
+}

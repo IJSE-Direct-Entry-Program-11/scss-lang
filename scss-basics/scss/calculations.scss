@@ -1,0 +1,22 @@
+@use 'sass:math' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    border: 5px solid black;
+    padding: #{2 + 3 * 10}px;
+    margin: 0;
+    height: calc(100vh - 100px);
+}
+
+h1 {
+    font-size: 1rem * 4;
+    position: fixed;
+    top: calc(50% - 100px);
+}
+
+p {
+    font-size: #{ceil(17.8) + 'px'};
+}

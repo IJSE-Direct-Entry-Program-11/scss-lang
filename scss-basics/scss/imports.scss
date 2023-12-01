@@ -1,0 +1,16 @@
+@import './utils.scss';
+@import './base.scss';
+
+.text-red {
+    color: blue;
+}
+
+h1 {
+    @extend .text-center, .text-red;
+    font-size: $font-size;
+}
+
+p {
+    @extend .text-center;
+    margin: 10px;
+}

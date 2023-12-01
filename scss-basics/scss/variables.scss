@@ -1,0 +1,22 @@
+$my-var: lime;
+$crazyVar: padding;
+$crazyVar2: p;
+
+h1 {
+    background-color: $my-var;      // as a value
+}
+
+#{$crazyVar2} {                     // as a selector
+    $my-bg: yellow;
+    $my-var: black;
+    #{$crazyVar + '-left'}: 40px;
+
+    span {
+        background-color: $my-bg;
+        border: 5px solid $my-var;
+        #{$crazyVar}: 50px;         // as a property
+    }
+}
+
+// Comment
+/* Comment */

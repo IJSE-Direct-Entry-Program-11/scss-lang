@@ -1,0 +1,22 @@
+%base-styles{
+    text-align: center;
+    font-family: Ubuntu, system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    @extend %base-styles;
+    color: darkgray;
+}
+
+p {
+    @extend %base-styles;
+    font-size: 1.1rem;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+div {
+    @extend p;
+    border: 1px solid lightgray;
+}

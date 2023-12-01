@@ -1,0 +1,70 @@
+$text-aligns: (left, center, right);
+
+@each $align in $text-aligns {
+    .text-#{$align}{
+        text-align: $align;
+    }
+}
+
+$displays: (flex, none, block, inline, 
+            inline-block, grid);
+
+@each $display in $displays {
+    .d-#{$display}{
+        display: $display;
+    }
+}
+
+$justify-contents: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around
+);
+
+@each $key, $value in $justify-contents {
+
+    .justify-content-#{$key}{
+        justify-content: $value;
+    }
+
+}
+
+$align-itmes-map: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+);
+
+@each $key, $value in $justify-contents {
+
+    .align-items-#{$key}{
+        align-items: $value;
+    }
+
+}
+
+@each $direction in (row, column){
+    .flex-#{$direction} {
+        flex-direction: $direction;
+    }
+}
+
+@for $i from 0 to 11 {
+    .p-#{$i}{
+        padding: $i * 2px;
+    }
+    .pt-#{$i}{
+        padding-top: $i * 2px;
+    }
+    .pb-#{$i}{
+        padding-bottom: $i * 2px;
+    }
+    .pl-#{$i}{
+        padding-left: $i * 2px;
+    }
+    .pr-#{$i}{
+        padding-right: $i * 2px;
+    }    
+}

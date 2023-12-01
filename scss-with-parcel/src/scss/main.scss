@@ -1,0 +1,17 @@
+$my-var: green;
+
+h1 {
+    color: $my-var;
+
+    @media all and (max-width: 500px) {
+        color: blue;
+    }
+}
+
+$colors: (red, green, blue, yellow, black);
+
+@each $c in $colors {
+    .text-#{$c} {
+        color: $c;
+    }
+}

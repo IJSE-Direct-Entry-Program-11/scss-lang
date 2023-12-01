@@ -1,0 +1,25 @@
+@function myFn($param1, $param2, $param3){
+    $result : $param1 + $param2;
+    $result : $result * $param3;
+    @return $result;
+}
+
+p {
+    padding: myFn(2px, 2px, 5);
+}
+
+@function fontSize($times, $base: 1rem){
+    @return $base * $times;
+}
+
+h1 {
+    font-size: fontSize(3);
+}
+
+p {
+    font-size: fontSize(1.5);
+}
+
+div {
+    font-size: fontSize(1.2, 20px);
+}

@@ -1,0 +1,15 @@
+@use './partials/base' as abc;
+@use './partials/utils';
+
+@include utils.theme();
+
+h1 {
+    @extend .heading;
+    // font-size: abc.$-font-size;  
+}
+
+p {
+    @extend .paragraph;
+}
+
+@debug 'ijse';

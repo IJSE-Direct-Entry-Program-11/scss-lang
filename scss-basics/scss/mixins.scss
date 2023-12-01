@@ -1,0 +1,35 @@
+@mixin my-theme($bgColor, 
+                $fontSize,
+                $fontColor: black,
+                $fontFamily: 'Ubuntu'){
+    background-color: $bgColor;
+    color: $fontColor;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+}
+
+h1 {
+    @include my-theme(lime,
+         black, 2rem);
+    text-align: center;
+}
+
+p {
+    @include my-theme(white, 1.2rem,
+             $fontFamily: 'Arial');
+    border: 4px solid lightgray;
+    padding: 5px;
+}
+
+//==================================
+
+
+@mixin my-mixin($color: gray, $size, $align:center){
+    color: $color;
+    font-size: $size;
+    text-align: $align;
+}
+
+div {
+    @include my-mixin($align: left, $size: 2rem );
+}

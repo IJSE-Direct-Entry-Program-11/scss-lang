@@ -1,0 +1,13 @@
+$-font-size: 3rem;
+
+@mixin theme(){
+    .heading {
+        color: red;
+        font-size: $-font-size;
+    }
+    
+    .paragraph {
+        text-align: center;
+        padding: 10px;
+    }
+}
